@@ -72,8 +72,7 @@
                 .fa-map-marker-alt {
                     position: absolute;
                     color: black;
-                    justify-content: center;
-                    align-items: center;
+                    transform: translate(15px, 10px)
                 }
                 
                 .type-search {
