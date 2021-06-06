@@ -227,6 +227,7 @@
         border-radius: 20px;
         padding: 10px;
         width: 66%;
+        align-items: center;
     }
     
     #hebergement,
@@ -239,6 +240,7 @@
         font-weight: bold;
         font-size: 1.1em;
         padding: 15px;
+        align-self: normal;
     }
     
     #hebergement,
@@ -249,18 +251,20 @@
     
     .hebergement_contenu {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 98%;
     }
     
-    .container_1 {
-        margin: 20px;
-        width: 33%;
+    .container_item {
+        width: 31%;
     }
     
     .box {
         border: 3px solid white;
         box-shadow: 0px 0px 20px #d9d9d9;
         border-radius: 20px;
-        padding: 5px 5px 10px 5px;
+        padding: 3px 3px 10px 3px;
         background-color: white;
         margin-bottom: 28px;
         height: 175px;
@@ -278,6 +282,8 @@
         font-size: 1.4em;
         padding-top: 15px;
         margin-left: 20px;
+        align-self: start;
+        padding-bottom: 20px;
     }
     
     .hebergement_image {
@@ -288,8 +294,8 @@
     .photo_hebergements {
         width: 100%;
         height: 120px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         object-fit: cover;
         height: 60%;
     }
@@ -318,7 +324,7 @@
     #titre_populaires {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: flex-end;
         margin-right: 15px;
     }
     
@@ -374,7 +380,7 @@
     #activites_a_marseille {
         background-color: white;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         width: 98%;
         padding-top: 20px;
     }
@@ -389,8 +395,6 @@
         justify-content: space-between;
         display: flex;
         align-content: space-between;
-        box-sizing: border-box;
-        margin-top: 20px;
         height: 490px;
         padding-bottom: 20px;
         margin-bottom: 20px;
@@ -398,6 +402,7 @@
     
     .box_activite {
         width: 23%;
+        align-items: space-between;
     }
     
     .activite1,
@@ -418,7 +423,6 @@
     .activite2_2 {
         border-radius: 20px;
         box-shadow: 0px 0px 10px #d9d9d9;
-        margin-bottom: 30px;
         width: 100%;
     }
     
@@ -428,15 +432,19 @@
     
     .activite2_1 {
         height: 65%;
+        margin-bottom: 30px;
     }
     
     .activite4_1,
     .activite4_2 {
         border-radius: 20px;
         box-shadow: 0px 0px 10px #d9d9d9;
-        margin-bottom: 30px;
         width: 100%;
         height: 50%;
+    }
+    
+    .activite4_1 {
+        margin-bottom: 30px;
     }
     
     .photo_activite11,
@@ -505,7 +513,7 @@
         .hebergements_activites {
             position: absolute;
             bottom: -30px;
-            left: -20px;
+            right: 35px;
             width: 100%;
             display: flex;
             justify-content: space-around;
@@ -514,10 +522,12 @@
         }
         .headernavlink {
             border-bottom: #0065FC solid 3px;
-            padding-bottom: 15px;
-            width: 50%;
+            padding-bottom: 23px;
+            width: 40%;
             color: #0065FC;
             border-top: none;
+            align-items: flex-start;
+            margin-left: 20px;
         }
         a:hover {
             text-decoration: none;
@@ -569,14 +579,8 @@
             display: flex;
             flex-direction: column-reverse;
         }
-        .hebergement_contenu {
-            flex-direction: column;
-            margin-right: 25px;
-            align-items: center;
-        }
-        .container_1 {
-            margin-bottom: -10px;
-            width: 100%;
+        .container_item {
+            width: 88%;
         }
         .box {
             width: 100%;
@@ -605,7 +609,7 @@
         .activites_container {
             flex-direction: column;
             height: auto;
-            margin-bottom: -25px;
+            width: 90%;
         }
         .photo_activite33,
         .photo_activite11,
@@ -618,7 +622,7 @@
         }
         .box_activite {
             width: 100%;
-            padding-top: 15px;
+            padding-top: 30px;
         }
         .activite1,
         .activite2_1,
@@ -627,13 +631,6 @@
         .activite4_1,
         .activite4_2 {
             height: 175px;
-        }
-        .activite4_2,
-        .activite2_2 {
-            margin-top: -10px;
-        }
-        .activite3 {
-            margin-top: -30px;
         }
         /*footer*/
         .les_titre {
@@ -648,7 +645,7 @@
             width: 100%;
         }
         h5 {
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: normal;
         }
         .contenu_footer {
@@ -728,43 +725,3 @@
             width: 100%;
         }
     }
-    /*boutons hébergement/activités :
-    - plus d'espacement
-    - barre grise en dessous
-    
-rajouter la "loupe" a coté du champ de recherche
-    
-    
-corriger la faute sur "populairES"
-    
-    
-"plaquer" les zones geises aux bords de l'écran. (enlever les "gouttières")
-    
-    vignettes popualires : faire en sorte que ce soit bien équilibré (même padding autour de l'image)
-    
-    vignettes : rajouter une petite ombre comme sur la maquette
-    
-    activités : décaler le nom de lactivité vers la droite dans les vignettes
-    
-    
-    footer :
-        - corriger faute sur "a propos"
-        - plaquer le footer aux bord de l'écran (et en bas aussi)  CODE :
-Refaire l'indentation du fichier CSS. Tout fdoit etre plaqué à gauche
-
-CSS : bien reoir la différence entre classe et id
-
-Syntaxe : éviter de mettre les tirets "-" dans les id (option)
-
-Boutons recherche : enlever la div "mobile", et laissez les boutons redescendre quand c'est nécéssaire
-
-mettre toutes les étoiles à la ligne (comme ligne 144)
-
-ligne 98 : classe "hebergement a marseille" : enlever le "a_marseille", car le titre aura le même style que l'on soit a marseille ou dans n'importe quelle autre ville.
-
-supprimer les espaces autour des noms des classes et des id
-
-
-Footer : 
-    -essayer de faire moins de div (je pense qu'il y en a en trop, mais à voir)
-- l. 334 : les br ne servent à rien apres les h5, tu peux les enlev*/
